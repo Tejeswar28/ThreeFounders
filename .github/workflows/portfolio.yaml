@@ -1,0 +1,60 @@
+name: Test and package Flask app
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Check Python syntax
+        run: python -m compileall -q app.py
+
+      - name: Smoke-test Flask routes
+        run: |
+          python - <<'PY'
+          from app import app
+
+          client = app.test_client()
+          assert client.get("/").status_code == 200
+          response = client.get("/health")
+          assert response.status_code == 200
+          assert response.get_json() == {"status": "ok"}
+          print("Flask smoke tests passed")
+          PY
+
+      - name: Package app
+        run: |
+          mkdir -p dist
+          cp app.py requirements.txt .python-version dist/
+          cp -r templates public dist/
+
+      - name: Upload deployable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flask-app
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
