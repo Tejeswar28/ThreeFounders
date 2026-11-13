@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Three Founders is a Bengaluru-based engineering team working across data engineering, product development, payment systems, and AI-powered automation.">
+  <meta name="theme-color" content="#08090d">
+  <meta property="og:title" content="Three Founders — Engineering Studio">
+  <meta property="og:description" content="Data engineering, product development, and AI-powered automation from a Bengaluru-based team.">
+  <meta property="og:type" content="website">
+  <title>Three Founders — Engineering Studio in Bengaluru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('styles_css') }}">
+</head>
+<body>
+<main>
+<nav class="nav-shell">
+  <a href="#top" class="brand" aria-label="Three Founders home"><span class="brand-mark"><span></span><span></span><span></span></span><span>THREE<span class="brand-muted">/</span>FOUNDERS</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#studio">Studio</a><a href="#capabilities">Capabilities</a><a href="#team">Team</a><a href="#work">Work</a><a href="#contact">Contact</a>
+    <a class="nav-cta" href="#contact">START A PROJECT ↗</a>
+  </div>
+  <button class="mobile-menu" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+</nav>
+<section class="hero" id="top">
+  <div class="hero-grid"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+  <div class="hero-content">
+    <div class="eyebrow"><span class="pulse-dot"></span> ENGINEERING STUDIO <span class="eyebrow-divider">/</span> BENGALURU, INDIA</div>
+    <h1>WE ENGINEER<br><span class="headline-accent">WHAT'S NEXT.</span></h1>
+    <p class="hero-copy">Three engineers bringing together data platforms, enterprise software, payment systems, and practical AI automation.</p>
+    <div class="hero-actions"><a class="button button-primary" href="#work">EXPLORE OUR WORK ↗</a><a class="button button-quiet" href="#contact">LET'S BUILD SOMETHING →</a></div>
+    <div class="hero-foot"><span>ENGINEERING / AI / DATA / SOFTWARE</span><span>SCROLL TO EXPLORE ↓</span></div>
+  </div>
+  <div class="hero-graphic" aria-label="Three connected nodes representing the founders">
+    <div class="graphic-caption">THREE ENGINEERING DISCIPLINES <span>● BENGALURU, INDIA</span></div>
+    <svg class="network-svg" viewBox="0 0 520 430" role="img" aria-hidden="true">
+      <defs><linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00e5ff"/><stop offset="1" stop-color="#a855f7"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+      <path d="M260 92 L115 310 L405 310 Z" fill="none" stroke="url(#lineGrad)" stroke-width="1.2" stroke-dasharray="5 8"/><path d="M260 92 L260 215 M115 310 L260 215 L405 310" fill="none" stroke="#00e5ff" stroke-opacity=".22"/>
+      <circle cx="260" cy="92" r="42" fill="#a855f7" fill-opacity=".08" stroke="#a855f7" stroke-opacity=".7"/><circle cx="115" cy="310" r="42" fill="#00e5ff" fill-opacity=".08" stroke="#00e5ff" stroke-opacity=".7"/><circle cx="405" cy="310" r="42" fill="#ff2e93" fill-opacity=".07" stroke="#ff2e93" stroke-opacity=".7"/>
+      <g filter="url(#glow)"><circle cx="260" cy="92" r="4" fill="#c69aff"/><circle cx="115" cy="310" r="4" fill="#00e5ff"/><circle cx="405" cy="310" r="4" fill="#ff72b8"/></g>
+      <circle cx="260" cy="215" r="20" fill="#0b0d14" stroke="#00e5ff" stroke-opacity=".7"/><path d="M252 215h16M260 207v16" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="260" y="35" text-anchor="middle" fill="#c5a4ff" font-size="10" letter-spacing="2">AVINASH</text><text x="115" y="378" text-anchor="middle" fill="#7cefff" font-size="10" letter-spacing="2">SUDARSHAN</text><text x="405" y="378" text-anchor="middle" fill="#ff8ac4" font-size="10" letter-spacing="2">TEJES</text><text x="260" y="258" text-anchor="middle" fill="#858b9b" font-size="8" letter-spacing="2">SHARED VISION</text>
+    </svg>
+    <div class="graphic-bottom"><span>01 — THINK</span><span>02 — CONNECT</span><span>03 — BUILD</span></div>
+  </div>
+  <a class="scroll-cue" href="#studio"><span></span> SCROLL TO DISCOVER</a>
+</section>
+<section class="intro section-pad" id="studio">
+  <div><div class="section-label"><span class="label-line"></span>01 / THE STUDIO</div><div class="intro-grid">
+    <h2>SMALL TEAM.<br><span class="muted-heading">BIG ENGINEERING</span><br><span class="cyan-text">ENERGY.</span></h2>
+    <div class="intro-text">    <p class="lead">A three-founder team with experience across data engineering, enterprise product development, and payment technology.</p><p>Our work spans cloud data migrations, responsive learning platforms, event-driven payment services, and AI-assisted data workflows.</p>
+      <div class="principles">{% for no,title,desc in [('01','THINK SYSTEMICALLY','Architecture, scalability, and long-term maintainability.'),('02','BUILD INTELLIGENTLY','Modern technologies and AI where they create real value.'),('03','DELIVER PRACTICALLY','Working solutions, measurable outcomes, and iteration.')] %}<div class="principle"><span>{{ no }}</span><div><b>{{ title }}</b><small>{{ desc }}</small></div><span>↗</span></div>{% endfor %}</div>
+    </div>
+  </div></div>
+</section>
+<section class="services-section section-pad" id="capabilities">
+  <div class="section-label"><span class="label-line"></span>02 / WHAT WE DO</div><div class="section-heading-row"><div><h2>ENGINEERING<br><span class="muted-heading">CAPABILITIES.</span></h2></div><p class="section-aside">A focused set of capabilities for turning complex business challenges into dependable digital systems.</p></div>
+  <div class="service-grid">{% for no,title,tag,desc,items,color,symbol in services %}
+    <article class="service-card accent-{{ color }}"><div class="service-top"><span>{{ no }} / {{ "%02d"|format(services|length) }}</span><span>{{ symbol }}</span></div><div class="service-tag">{{ tag }}</div><h3>{{ title }}</h3><p>{{ desc }}</p><ul>{% for item in items %}<li><span></span>{{ item }}</li>{% endfor %}</ul><a href="#contact" class="card-link">DISCUSS A PROJECT ↗</a></article>
+  {% endfor %}</div>
+</section>
+<section class="team-section section-pad" id="team">
+  <div class="section-label"><span class="label-line"></span>03 / THE PEOPLE</div><div class="section-heading-row"><h2>THREE MINDS.<br><span class="muted-heading">SHARED AMBITION.</span></h2><p class="section-aside">Different perspectives. One collaborative engineering practice. Meet the people behind the work.</p></div>
+  <div class="team-grid">{% for member in team %}<article class="member-card member-{{ member.accent }}"><div class="member-visual"><div class="member-grid"></div><div class="avatar-ring"><span>{{ member.initials }}</span></div><div class="member-index">FOUNDER / 0{{ loop.index }}</div><div class="member-cross">+</div></div><div class="member-info"><div class="member-role">{{ member.role }}</div><h3>{{ member.name }}<span>.</span></h3><div class="member-location">{{ member.location }}</div><p>{{ member.bio }}</p><div class="skill-list">{% for skill in member.focus %}<span>{{ skill }}</span>{% endfor %}</div><div class="member-social"><a href="{{ member.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile for {{ member.name }}">↗ LINKEDIN</a><a href="{{ member.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile for {{ member.name }}">↗ GITHUB</a></div></div></article>{% endfor %}</div>
+</section>
+<section class="work-section section-pad" id="work">
+  <div class="section-label"><span class="label-line"></span>04 / SELECTED WORK</div><div class="section-heading-row"><h2>LIVE PRODUCTS.<br><span class="muted-heading">REAL-WORLD SYSTEMS.</span></h2><p class="section-aside">A selection of live digital experiences across commerce, education, and hospitality.</p></div>
+  <div class="project-grid">{% for project in projects %}<article class="project-card"><div class="project-art {{ project.visual }}"><div class="art-top"><span>PROJECT / {{ project.id }}</span><span>{{ project.status|upper }}</span></div>
+    <div class="project-illustration" aria-hidden="true">
+      {% if project.visual == 'visual-commerce' %}
+      <div class="commerce-card"><span class="scene-kicker">LSJ / FINE JEWELLERY</span><svg viewBox="0 0 180 120"><ellipse cx="90" cy="82" rx="45" ry="15" fill="none" stroke="currentColor" stroke-width="8"/><path d="M75 48 90 23l15 25-15 18z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M75 48h30M90 23v43" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="23" r="4" fill="currentColor"/></svg><span class="scene-caption">HALLMARKED COLLECTIONS</span></div>
+      {% elif project.visual == 'visual-medical' %}
+      <div class="medical-card"><span class="scene-kicker">A.C.S.R. / NELLORE</span><svg viewBox="0 0 220 140"><path d="M40 118V48h140v70M25 118h170M62 65h18v18H62zm38 0h18v18h-18zm38 0h18v18h-18zM62 93h18v18H62zm76 0h18v18h-18z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M100 118V91h20v27M104 27h12m-6-6v12" fill="none" stroke="currentColor" stroke-width="4"/><path d="M88 48V36h44v12" fill="none" stroke="currentColor" stroke-width="4"/></svg><span class="scene-caption">GOVERNMENT MEDICAL COLLEGE</span></div>
+      {% else %}
+      <div class="hospitality-card"><span class="scene-kicker">TAABLR / TABLE 04</span><div class="menu-phone"><div class="phone-camera"></div><div class="menu-screen"><b>MENU</b><span></span><span></span><span></span><div class="qr-code"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>SCAN TO ORDER</small></div></div><span class="scene-caption">SCAN · ORDER · SERVED</span></div>
+      {% endif %}
+    </div></div>
+    <div class="project-info"><div class="project-meta"><span>{{ project.category }}</span><span>{{ project.status }}</span></div><h3>{{ project.title }}</h3><p>{{ project.description }}</p><div class="project-stack">{% for item in project.stack %}<span>{{ item }}</span>{% endfor %}</div><div class="project-actions"><a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">VIEW LIVE PROJECT</a><span aria-hidden="true">↗</span></div></div></article>{% endfor %}</div>
+</section>
+<section class="stack-section section-pad">
+  <div class="section-label"><span class="label-line"></span>05 / OUR TOOLKIT</div><div class="section-heading-row"><h2>THE ENGINEERING<br><span class="muted-heading">TOOLKIT.</span></h2><p class="section-aside">Tools are selected to fit the problem — not the other way around.</p></div>
+  <div class="stack-list">{% for name,values in technologies %}<div class="stack-row"><div class="stack-category"><span>◈</span><span>{{ name }}</span></div><div class="stack-items">{% for value in values.split(' · ') %}<span>{{ value }}</span>{% endfor %}</div><span class="stack-arrow">↗</span></div>{% endfor %}</div>
+</section>
+<section class="process-section section-pad">
+  <div class="section-label"><span class="label-line"></span>06 / THE METHOD</div><div class="section-heading-row"><h2>FROM PROBLEM<br><span class="muted-heading">TO PRODUCTION.</span></h2><p class="section-aside">A clear, collaborative process that keeps the business objective connected to every engineering decision.</p></div>
+  <div class="process-grid">{% for no,title,desc in process %}<div class="process-step"><div class="process-number">{{ no }}<span>{% if not loop.last %}→{% else %}✓{% endif %}</span></div><h3>{{ title }}</h3><p>{{ desc }}</p></div>{% endfor %}</div>
+</section>
+<section class="why-section section-pad">
+  <div class="section-label"><span class="label-line"></span>07 / WHY THIS STUDIO</div><div class="why-layout"><h2>ENGINEERING<br><span class="cyan-text">WITHOUT THE</span><br>OVERHEAD.</h2><div class="why-content"><p class="lead">Work directly with the people designing and building your solution.</p><div class="benefit-grid">{% for b in ['Direct communication with the builders','Collaborative problem-solving','Flexible engineering approach','Modern, considered technology choices','Focus on practical business outcomes','End-to-end solution development'] %}<div><span>0{{ loop.index }}</span>{{ b }}</div>{% endfor %}</div></div></div>
+</section>
+<section class="contact-section section-pad" id="contact">
+  <div class="section-label"><span class="label-line"></span>08 / START A CONVERSATION</div><div class="contact-layout"><div class="contact-copy"><div class="contact-kicker"><span class="pulse-dot"></span> PROJECT ENQUIRIES WELCOME</div><h2>HAVE A PROBLEM<br><span class="cyan-text">WORTH SOLVING?</span></h2><p>Share what you are building, the challenge you are solving, and how to reach you. Project enquiries go directly to Avinash.</p><div class="contact-direct"><span>CONTACT AVINASH · BENGALURU, INDIA</span><a href="mailto:{{ studio_email }}">{{ studio_email }} ↗</a><a href="tel:+918790564558">{{ studio_phone }} ↗</a></div></div>
+  <form class="contact-form" method="post" action="{{ url_for('contact') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="form-heading"><span>PROJECT INTAKE / 001</span><span>LET'S TALK ↗</span></div>
+    <div class="form-row"><label>YOUR NAME<input name="name" autocomplete="name" placeholder="How should we address you?" required maxlength="120"></label><label>BUSINESS / ORGANIZATION<input name="organization" autocomplete="organization" placeholder="Company or team" maxlength="160"></label></div>
+    <label>PHONE NUMBER <span class="optional">(OPTIONAL)</span><input name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" maxlength="40"></label>
+    <label>EMAIL ADDRESS<input name="email" type="email" placeholder="you@company.com" required maxlength="254"></label>
+    <label>PROJECT TYPE<select name="projectType" required><option value="" disabled selected>Select a capability</option><option>Data Engineering</option><option>Product Development</option><option>AI &amp; Workflow Automation</option><option>Other</option></select></label>
+    <label>WHAT ARE YOU LOOKING TO BUILD?<textarea name="description" rows="4" placeholder="A little context about the problem, your goals, and what success looks like..." required maxlength="10000"></textarea></label>
+    <label>ESTIMATED BUDGET <span class="optional">(OPTIONAL)</span><select name="budget"><option value="">Not decided yet</option><option>Under ₹2,00,000</option><option>₹2,00,000 – ₹5,00,000</option><option>₹5,00,000+</option></select></label>
+    <button class="button button-primary submit-button" type="submit">INITIATE COLLABORATION ↗</button>
+    {% with messages = get_flashed_messages(with_categories=true) %}{% for category,message in messages %}<p class="form-message {{ category }}" role="status">{{ message }}</p>{% endfor %}{% endwith %}
+    <p class="form-privacy">Your enquiry is emailed directly to Avinash and is not stored by this site.</p>
+  </form></div>
+</section>
+<footer class="footer"><div class="footer-main"><div><a href="#top" class="brand"><span class="brand-mark"><span></span><span></span><span></span></span><span>THREE<span class="brand-muted">/</span>FOUNDERS</span></a><p>Three founders. One engineering team.<br>Bengaluru, India.</p></div><div class="footer-nav"><span>EXPLORE</span><a href="#studio">Studio</a><a href="#capabilities">Capabilities</a><a href="#team">The team</a><a href="#work">Selected work</a></div><div class="footer-nav"><span>CONTACT</span><a href="#contact">Start a project</a><a href="mailto:{{ studio_email }}">Email Avinash</a><a href="tel:+918790564558">{{ studio_phone }}</a></div><div class="footer-nav"><span>AVINASH</span><a href="https://www.linkedin.com/in/thammaiahgari-avinash-3236aa222" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/avinasht213" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="footer-bottom"><span>© {{ year }} THREE FOUNDERS</span><span>DATA · PRODUCT · ENGINEERING</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+</main>
+<script src="{{ url_for('app_js') }}" defer></script>
+</body></html>
